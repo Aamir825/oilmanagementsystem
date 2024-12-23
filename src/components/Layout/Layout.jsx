@@ -3,6 +3,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import { Outlet } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/footer'
+import BreadCrumb from '../BreadCrumb/BreadCrumb'
 
 const Layout = () => {
   return (
