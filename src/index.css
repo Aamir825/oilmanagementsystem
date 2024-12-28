@@ -20,10 +20,16 @@
   }
 }
 
-.no-spinner {
-  -moz-appearance: textfield; /* Firefox */
-  -webkit-appearance: none; /* Chrome, Safari, Edge */
-  appearance: none; /* Standard */
+/* Add this to your global CSS or relevant CSS file */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: none;
 }
 
 /* :root {
