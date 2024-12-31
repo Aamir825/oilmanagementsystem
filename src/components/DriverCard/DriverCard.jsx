@@ -185,7 +185,7 @@ const DriverCard = ({drivers}) => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Total Quantity:</span>
-                    <span className="font-medium">{drivers.totalQuantity}</span>
+                    <span className="font-medium">{drivers.totalQuantity}<span className='text-slate-400'>/Ltr</span></span>
                   </div>
                 </div>
               </div>
@@ -198,15 +198,15 @@ const DriverCard = ({drivers}) => {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Total Amount:</span>
-                    <span className="font-medium">${drivers.totalAmount.toLocaleString()}</span>
+                    <span className="font-medium">Rs {drivers.totalAmount.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Cash Pump:</span>
-                    <span className="font-medium">${parseInt(drivers.cashPump).toLocaleString()}</span>
+                    <span className="font-medium">Rs {parseInt(drivers.cashPump).toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Fuel Price:</span>
-                    <span className="font-medium">${parseInt(drivers.fuelPrice).toLocaleString()}</span>
+                    <span className="font-medium">Rs {parseInt(drivers.fuelPrice).toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -228,7 +228,7 @@ const DriverCard = ({drivers}) => {
 
               {/* Fuel Quantity */}
               <div>
-                <h3 className="text-sm font-semibold mb-2">Fuel Quantity</h3>
+                <h3 className="text-sm font-semibold mb-2">Vehical Fuel</h3>
                 <Progress value={(drivers.totalQuantity / 50000) * 100} className="h-2 mb-2" />
                 <div className="flex justify-between text-xs text-gray-500">
                   <span>0</span>
