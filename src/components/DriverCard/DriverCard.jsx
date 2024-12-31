@@ -180,8 +180,12 @@ const DriverCard = ({drivers}) => {
                     <span className="font-medium">{drivers.pmg}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">Vehicle Diesel:</span>
-                    <span className="font-medium">{drivers.vehicleDiesel}</span>
+                    <span className="text-sm text-gray-500">TRON:</span>
+                    <span className="font-medium">{drivers.tron}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-500">Total Quantity:</span>
+                    <span className="font-medium">{drivers.totalQuantity}</span>
                   </div>
                 </div>
               </div>
@@ -216,6 +220,10 @@ const DriverCard = ({drivers}) => {
                   <MapPin className="h-4 w-4 text-gray-500" />
                   <span>{drivers.pump}</span>
                 </div>
+                <div className="flex justify-between items-center mt-2">
+                    <span className="text-sm text-gray-500">Total Shortage:</span>
+                    <span className="font-medium">${parseInt(drivers.totalShortage).toLocaleString()}</span>
+                  </div>
               </div>
 
               {/* Fuel Quantity */}
@@ -230,17 +238,6 @@ const DriverCard = ({drivers}) => {
 
               <Separator />
 
-              {/* Additional Info */}
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-sm text-gray-500">Total Shortage</p>
-                  <p className="font-medium">{drivers.totalShortage}</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Tron</p>
-                  <p className="font-medium">{drivers.tron}</p>
-                </div>
-              </div>
             </div>
           </CardContent>
         </ScrollArea>

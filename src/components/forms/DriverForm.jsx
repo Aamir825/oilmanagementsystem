@@ -6,6 +6,7 @@ import { Calendar } from '../ui/calendar'
 import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
+import { useForm } from 'react-hook-form'
 
 const DriverForm = () => {
 
@@ -30,18 +31,20 @@ const DriverForm = () => {
 
   useEffect(() => {
     const { hsd, pmg, tron, previous, present, vehicleDiesel, distance, cashPump, fuelPrice } = driverDetails;
+    if(hsd && pmg && tron && previous && present && vehicleDiesel && distance && cashPump && fuelPrice) {
     const totalOilQuantity = parseFloat(hsd) + parseFloat(pmg) + parseFloat(tron);
     const totalDistance = parseFloat(present) - parseFloat(previous);
     const totalAverage = parseFloat(distance) / parseFloat(vehicleDiesel);
     const totalAmountValue = parseFloat(cashPump) + parseFloat(fuelPrice);
     setdriverDetails((prev) => ({ ...prev, totalQuantity: totalOilQuantity, distance: totalDistance, average: totalAverage, totalAmount: totalAmountValue }))
+    }
   }, [driverDetails.hsd, driverDetails.pmg, driverDetails.tron, driverDetails.previous, driverDetails.present, driverDetails.vehicleDiesel, driverDetails.distance, driverDetails.cashPump, driverDetails.fuelPrice])
 
   const handleDateSelect = (selectedDate) => {
-    const formattedDate = format(selectedDate, "yyyy-MM-dd"); // format the date to a suitable format
+    const formattedDate = format(selectedDate, "yyyy-MM-dd");
     setdriverDetails((prev) => ({
       ...prev,
-      date: formattedDate, // Add the date to the product state directly
+      date: formattedDate,
     }));
   };
 
@@ -103,7 +106,7 @@ const DriverForm = () => {
           </div>
           <div className='grid grid-cols-2 gap-2'>
             <Input type="number" name="totalAmount" value={driverDetails.totalAmount} placeholder="Total" onChange={handleChange} className=" bg-gradient-to-r from-[#e1ecff] to-[#ffd2fd]" disabled />
-            <Button size="lg" className="bg-white text-black border border-slate-300">Submit Data</Button>
+            <Button size="lg" className="bg-[#f38c8c] text-white border border-slate-300 hover:bg-gradient-to-r from-[#f38c8c] to-[#67d7e9] duration-150">Submit Data</Button>
           </div>
         </div>
       </form>
