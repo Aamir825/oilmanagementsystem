@@ -5,7 +5,8 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 import { Truck, Calendar, DollarSign, Fuel, MapPin } from 'lucide-react'
 
-const DriverCard = ({drivers}) => {
+const DriverCard = ({driverList}) => {
+ 
   return (
     <>
       {/* <Card className="w-full mx-auto bg-transparent">
@@ -119,7 +120,8 @@ const DriverCard = ({drivers}) => {
         </div>
       </CardContent>
     </Card> */}
-    <Card className="flex lg:h-[210px] h-[150px] w-full mx-auto overflow-hidden bg-transparent mb-3">
+    {driverList.map((drivers,index) => (
+    <Card key={index} className="flex lg:h-[210px] h-[150px] w-full mx-auto overflow-hidden bg-transparent">
       {/* Left side - Number Plate */}
       <div className="lg:w-48 w-32 bg-gradient-to-b from-[#f38c8c] to-[#67d7e9] p-6 flex items-center justify-center">
         <div className="text-center">
@@ -198,15 +200,15 @@ const DriverCard = ({drivers}) => {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Total Amount:</span>
-                    <span className="font-medium">Rs {drivers.totalAmount.toLocaleString()}</span>
+                    <span className="font-medium">Rs {drivers.totalAmount}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Cash Pump:</span>
-                    <span className="font-medium">Rs {parseInt(drivers.cashPump).toLocaleString()}</span>
+                    <span className="font-medium">Rs {parseInt(drivers.cashPump)}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Fuel Price:</span>
-                    <span className="font-medium">Rs {parseInt(drivers.fuelPrice).toLocaleString()}</span>
+                    <span className="font-medium">Rs {parseInt(drivers.fuelPrice)}</span>
                   </div>
                 </div>
               </div>
@@ -222,17 +224,17 @@ const DriverCard = ({drivers}) => {
                 </div>
                 <div className="flex justify-between items-center mt-2">
                     <span className="text-sm text-gray-500">Total Shortage:</span>
-                    <span className="font-medium">${parseInt(drivers.totalShortage).toLocaleString()}</span>
+                    <span className="font-medium">Rs {parseInt(drivers.totalShortage)}</span>
                   </div>
               </div>
 
               {/* Fuel Quantity */}
               <div>
                 <h3 className="text-sm font-semibold mb-2">Vehical Fuel</h3>
-                <Progress value={(drivers.totalQuantity / 50000) * 100} className="h-2 mb-2" />
+                <Progress value={(drivers.vehicleDiesel / 50000) * 100} className="h-2 mb-2" />
                 <div className="flex justify-between text-xs text-gray-500">
-                  <span>0</span>
-                  <span>{drivers.totalQuantity} / 50000 liters</span>
+                  <span></span>
+                  <span>{drivers.vehicleDiesel} / 50000 liters</span>
                 </div>
               </div>
 
@@ -243,6 +245,7 @@ const DriverCard = ({drivers}) => {
         </ScrollArea>
       </div>
     </Card>
+    ))}
     </>
   )
 }
