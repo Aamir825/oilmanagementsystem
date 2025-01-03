@@ -12,7 +12,7 @@ const Layout = () => {
                 <Sidebar />
                 <div className=' flex flex-col flex-1'>
                     <Header />
-                    <main className=' flex-1 overflow-y-auto bg-gradient-to-r from-[#fcf7f7] to-[#defbff] text-black py-3 lg:pb-0 sm:pb-3 px-4'>
+                    <main className=' flex-1 overflow-y-auto bg-gradient-to-r from-[#fcf7f7] to-[#defbff] text-black py-3 pb-6 px-4'>
                         <Outlet />
                     </main>
                     <Footer />

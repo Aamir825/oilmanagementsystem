@@ -142,11 +142,11 @@ const DriverCard = ({driverList}) => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm font-medium text-gray-500">Distance</p>
-                  <p className="text-lg font-semibold">{drivers.distance} km</p>
+                  <p className="text-sm font-semibold">{drivers.distance} km</p>
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500">Average</p>
-                  <p className="text-lg font-semibold">{drivers.average} km/l</p>
+                  <p className="text-sm font-semibold">{drivers.average} km/l</p>
                 </div>
               </div>
 
@@ -158,11 +158,11 @@ const DriverCard = ({driverList}) => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="text-sm text-gray-500">Previous</p>
-                    <p className="font-medium">{drivers.previous}</p>
+                    <p className="text-sm font-medium">{drivers.previous} Km</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Present</p>
-                    <p className="font-medium">{drivers.present}</p>
+                    <p className="text-sm font-medium">{drivers.present} Km</p>
                   </div>
                 </div>
               </div>
@@ -175,19 +175,19 @@ const DriverCard = ({driverList}) => {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">HSD:</span>
-                    <span className="font-medium">{drivers.hsd}</span>
+                    <span className=" text-sm font-medium">{drivers.hsd}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">PMG:</span>
-                    <span className="font-medium">{drivers.pmg}</span>
+                    <span className=" text-sm font-medium">{drivers.pmg}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">TRON:</span>
-                    <span className="font-medium">{drivers.tron}</span>
+                    <span className=" text-sm font-medium">{drivers.tron}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Total Quantity:</span>
-                    <span className="font-medium">{drivers.totalQuantity}<span className='text-slate-400'>/Ltr</span></span>
+                    <span className=" text-sm font-medium">{drivers.totalQuantity}<span className='text-slate-400'>/Ltr</span></span>
                   </div>
                 </div>
               </div>
@@ -200,15 +200,15 @@ const DriverCard = ({driverList}) => {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Total Amount:</span>
-                    <span className="font-medium">Rs {drivers.totalAmount}</span>
+                    <span className=" text-sm font-medium">Rs {drivers.totalAmount}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Cash Pump:</span>
-                    <span className="font-medium">Rs {parseInt(drivers.cashPump)}</span>
+                    <span className=" text-sm font-medium">Rs {parseInt(drivers.cashPump)}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">Fuel Price:</span>
-                    <span className="font-medium">Rs {parseInt(drivers.fuelPrice)}</span>
+                    <span className=" text-sm font-medium">Rs {parseInt(drivers.fuelPrice)}</span>
                   </div>
                 </div>
               </div>
@@ -223,8 +223,8 @@ const DriverCard = ({driverList}) => {
                   <span>{drivers.pump}</span>
                 </div>
                 <div className="flex justify-between items-center mt-2">
-                    <span className="text-sm text-gray-500">Total Shortage:</span>
-                    <span className="font-medium">Rs {parseInt(drivers.totalShortage)}</span>
+                    <span className="text-sm text-gray-500">Shortage:</span>
+                    <span className=" text-sm font-medium">{parseInt(drivers.totalShortage)}<span className='text-slate-400'>/Ltr</span></span>
                   </div>
               </div>
 
