@@ -9,6 +9,21 @@ const THEMES = {
   dark: ".dark"
 }
 
+// Define ChartConfig
+const ChartConfig = {
+  theme: {
+    light: {
+      color: "blue",
+    },
+    dark: {
+      color: "darkblue",
+    },
+  },
+};
+
+// Export ChartConfig
+export { ChartConfig };
+
 const ChartContext = React.createContext(null)
 
 function useChart() {

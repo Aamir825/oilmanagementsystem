@@ -1,46 +1,39 @@
 import React from 'react'
-// import {
-//     Card,
-//     CardContent,
-//     CardDescription,
-//     CardFooter,
-//     CardHeader,
-//     CardTitle,
-//   } from "@/components/ui/card"
-//   import {
-//     ChartConfig,
-//     ChartContainer,
-//     ChartTooltip,
-//     ChartTooltipContent,
-//   } from "@/components/ui/chart"
-//   const chartData = [
-//     { month: "January", desktop: 186, mobile: 80 },
-//     { month: "February", desktop: 305, mobile: 200 },
-//     { month: "March", desktop: 237, mobile: 120 },
-//     { month: "April", desktop: 73, mobile: 190 },
-//     { month: "May", desktop: 209, mobile: 130 },
-//     { month: "June", desktop: 214, mobile: 140 },
-//   ]
-//   const chartConfig = {
-//     desktop: {
-//       label: "Desktop",
-//       color: "hsl(var(--chart-1))",
-//     },
-//     mobile: {
-//       label: "Mobile",
-//       color: "hsl(var(--chart-2))",
-//     },
-//   }
+import { Bar, BarChart, CartesianGrid, XAxis, ResponsiveContainer } from 'recharts';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } from "@/components/ui/card"
+  import {
+    ChartConfig,
+    ChartContainer,
+    ChartTooltip,
+    ChartTooltipContent,
+  } from "@/components/ui/chart"
+import { TrendingUp } from 'lucide-react';
+  const chartData = [
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
+  ]
 const Chart = () => {
   return (
     <>
-      {/* <Card>
+      <Card className=" bg-transparent border-0">
       <CardHeader>
-        <CardTitle>Bar Chart - Multiple</CardTitle>
+        {/* <CardTitle>Drivers Chart</CardTitle> */}
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
+      <CardContent className="h-[250px] w-full">
+        <ChartContainer config={ChartConfig} className=" h-full w-full">
+        <ResponsiveContainer width="100%" height="100%">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
@@ -57,6 +50,7 @@ const Chart = () => {
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
             <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
           </BarChart>
+          </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
@@ -67,7 +61,7 @@ const Chart = () => {
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
-    </Card> */}
+    </Card>
     </>
   )
 }

@@ -5,8 +5,8 @@ import { SiAlwaysdata, SiTraefikproxy } from 'react-icons/si'
 
 const Home = () => {
   return (
-    <div className=' grid grid-cols-4 gap-2'>
-      <div className=' bg-white bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black flex gap-3'>
+    <div className=' grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 gap-2'>
+      <div className='bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black flex gap-3'>
         <div>
           <AiOutlineProduct className=' bg-gradient-to-r from-[#ffe6e6] to-[#d2fbff] p-1 rounded-md' size={32} />
         </div>
@@ -16,7 +16,7 @@ const Home = () => {
           <p className=' text-[12px] text-slate-500'>All running and completed products</p>
         </div>
       </div>
-      <div className=' bg-white bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black flex gap-3'>
+      <div className=' bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black flex gap-3'>
         <div>
           <SiAlwaysdata className=' bg-gradient-to-r from-[#ffe6e6] to-[#d2fbff] p-1 rounded-md' size={32} />
         </div>
@@ -26,7 +26,7 @@ const Home = () => {
           <p className=' text-[12px] text-slate-500'>completion rate this month</p>
         </div>
       </div>
-      <div className=' bg-white bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black flex gap-3'>
+      <div className=' bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black flex gap-3'>
         <div>
           <SiTraefikproxy className=' bg-gradient-to-r from-[#ffe6e6] to-[#d2fbff] p-1 rounded-md' size={32} />
         </div>
@@ -36,7 +36,7 @@ const Home = () => {
           <p className=' text-[12px] text-slate-500'>completion rate increases</p>
         </div>
       </div>
-      <div className=' bg-white bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black col-span-1 row-span-3'>
+      <div className=' bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black lg:col-span-1 sm:col-span-1 lg:row-span-3 md:row-span-3 row-span-1'>
         <p className=" bg-gradient-to-r from-[#ffe6e6] to-[#d2fbff] inline-block py-1 px-2 text-[11px] mb-4 text-[#ff3300] rounded-lg">
           Team Review
         </p>
@@ -63,8 +63,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className=' bg-white bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black col-span-3 row-span-4'>
-        {/* <Chart/> */}
+      <div className=' bg-opacity-5 border border-slate-300 p-4 rounded-lg text-black lg:col-span-3 md:col-span-3 sm:col-span-1 row-span-4'>
+        <Chart/>
       </div>
     </div>
   )

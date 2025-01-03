@@ -13,8 +13,8 @@ const Sidebar = () => {
   return (
     <>
       <div className=' hidden lg:block w-60 bg-gradient-to-r from-[#fcf7f7] to-[#defbff]'>
-        <div className=' py-3 px-4'>
-          <NavLink><GiOilPump className=' text-black' size={70}/></NavLink>
+        <div className=' py-6 px-4'>
+          <NavLink><img src="images/fueltanker24.png" alt="" /></NavLink>
         </div>
         <div className=' px-4'>
           <ul>
