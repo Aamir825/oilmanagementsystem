@@ -10,7 +10,7 @@ const Header = () => {
           <BreadCrumb/>
         </div>
         <div>
-          <div><img src="images/fueltanker25.png" className='lg:hidden md:hidden' alt="" /></div>
+          <div><img src="images/fueltanker25.png" className='lg:hidden md:hidden sm:hidden' alt="" /></div>
         </div>
       </div>
     </div>
