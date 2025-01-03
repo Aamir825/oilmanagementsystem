@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import { Outlet } from 'react-router-dom'
 import Header from '../Header/Header'
-import Footer from '../Footer/footer'
+import Footer from '../Footer/Footer'
 import MobileNavigation from '../MobileNavigation/MobileNavigation'
 
 const Layout = () => {
